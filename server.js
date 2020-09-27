@@ -14,6 +14,15 @@ app.use((req, res, next) => {
       next(); 
 });
 
+// Redirect 301
+app.use(function forceLiveDomain(req, res, next) {
+  var host = req.get('Host');
+  if (host === 'mcbatataria.com.br') {
+    return res.redirect(301, 'https://www.mcbatataria.com.br/' + req.originalUrl);
+  }
+  return next();
+});
+
 // view engine setup
 app.set("views", path.join(__dirname, "src"));
 app.set("view engine", "ejs");
