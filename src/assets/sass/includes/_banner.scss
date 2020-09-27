@@ -1,0 +1,48 @@
+.banner{
+    .carousel-indicators{
+        li{
+            width: 12px;
+            border-radius: 100%;
+            height: 12px;
+            margin-right: 7px;
+            margin-left: 7px; 
+        }
+    }
+    .carousel-inner{
+        .carousel-item{
+            .carousel-caption{
+                height: 100%;
+                .title{
+                    font-family: $font_pacifico;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    font-size: 3rem;
+                    text-shadow: 3px 3px black;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $bp991) {
+        .carousel{
+            height: 400px;
+        }
+        .carousel-inner{
+            min-height: 400px;
+            background: $black;
+            .carousel-item{
+                >img{
+                    min-height: 400px;
+                    object-fit: cover;
+                }
+                .carousel-caption{
+                    .title{
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

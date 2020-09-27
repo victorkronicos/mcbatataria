@@ -1,0 +1,14 @@
+@import '_variables';
+@import 'elements/_btn';
+
+// Cabeçalho
+@import 'includes/_header';
+
+// Sections
+@import 'includes/banner';
+@import 'includes/historia';
+@import 'includes/localizacao';
+@import 'includes/cta';
+
+// Rodapé
+@import 'includes/footer';

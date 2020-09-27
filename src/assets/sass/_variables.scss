@@ -1,0 +1,56 @@
+// Fontes
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+$font_pacifico: 'Pacifico', cursive;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+$font_default: 'Open Sans', sans-serif;
+
+// Cores
+$black : black;
+$white : white;
+$brown :#481C0F;
+$skin  : #FDE6B2;
+$orange : #DD8810;
+
+$text_shadow: 1px 1px 0 $skin,-1px 1px 0 $skin,1px -1px 0 $skin,-1px -1px 0 $skin,0px 1px 0 $skin,0px -1px 0 $skin,-1px 0px 0 $skin,1px 0px 0 $skin, 2px 2px 0 $skin, -2px 2px 0 $skin, 2px -2px 0 $skin,-2px -2px 0 $skin, 0px 2px 0 $skin, 0px -2px 0 $skin, -2px 0px 0 $skin,2px 0px 0 $skin, 1px 2px 0 $skin, -1px 2px 0 $skin, 1px -2px 0 $skin, -1px -2px 0 $skin, 2px 1px 0 $skin, -2px 1px 0 $skin, 2px -1px 0 $skin, -2px -1px 0 $skin;
+
+// Utils
+$bold : 600;
+
+// Transition
+$transition_default: all 0.3s ease-in;
+
+// Font Size
+$font_menu: 1.175rem;
+
+//Viewports
+$bp991: 991.98px;
+$bp768: 768.98px;
+$bp425: 424.98px;
+
+
+//reset padding
+.no-pad{
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+
+//reset body
+body{
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   font-family: $font_default; 
+}
+
+// margin section
+%margin-section{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+%padding-section{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+

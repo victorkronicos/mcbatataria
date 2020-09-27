@@ -5,14 +5,14 @@ var app = express();
 // view engine setup
 app.set("views", path.join(__dirname, "src"));
 app.set("view engine", "ejs");
-app.use("/public", express.static(path.join(__dirname, 'public')));
+app.use( express.static( "public" ));
 
 app.get('/em-construcao', function (req, res) {
     res.sendFile('index.html', {root: __dirname })
   });
 
 app.get('/', function (req, res) {
-  res.render('index')
+  res.render('view/index')
 });
 
 app.listen(3000);

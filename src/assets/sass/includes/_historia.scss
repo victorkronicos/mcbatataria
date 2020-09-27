@@ -1,0 +1,42 @@
+.historia{
+    @extend %margin-section;
+    .title{
+        font-family: $font_pacifico;
+        color: $brown;
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .background-fixed{
+        width: 100%;
+        height: 100%;
+        background: $brown;
+        border-top-right-radius: 399px;
+        border-bottom-right-radius: 399px;
+        overflow: hidden;
+    }
+
+    .history{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+        font-family: $font_default;
+    }
+
+    @media (max-width: $bp991) {
+        .background-fixed{
+            transform: translateX(-15px);
+        }
+
+        .history{
+            width: 100%;
+            padding: 30px;
+            >p{
+                text-align: justify;
+            }
+        }
+    }
+}
