@@ -29,6 +29,11 @@
 
         .address , .time{
             align-items: center;
+            border-radius: 15px;
+            transition: $transition_default;
+            border-left: 3px solid transparent;
+            border-right: 3px solid transparent;
+
             .circle{
                 background: $orange;
                 width: 70px;
@@ -51,11 +56,10 @@
             }
 
             &:hover{
+                border-left: 3px solid $skin;
+                border-right: 3px solid $skin;
                 .circle{
                     transform: rotateY(180deg);
-                }
-                .address-info, .time-info{
-                    transform: scale(1.05);
                 }
             }
         }
