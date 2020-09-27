@@ -37,7 +37,7 @@ header{
             .active{
                 background-color: $skin;
                 color: $brown;
-                transition: all 0.2s ease-in-out;
+                transition: $transition_default;
                 &:hover{
                     transform: scale(1.09);
                 }

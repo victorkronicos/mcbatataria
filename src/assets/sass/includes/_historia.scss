@@ -19,11 +19,35 @@
 
     .history{
         width: 80%;
+        height: 100%;
+        font-family: $font_default;
         display: flex;
         flex-direction: column;
-        height: 100%;
-        justify-content: space-between;
-        font-family: $font_default;
+        justify-content: space-around;
+        position: relative;
+        &:after{
+            content: '';
+            position: absolute;
+            background: url('../images/historia/background-logo.png') no-repeat;
+            background-size: 100%;
+            width: 318px;
+            height: 307px;
+            opacity: 0.5;
+            top: 300px;
+            right: -250px;
+        }
+        @media (max-width: $bp991) {
+            &:after{display: none;}
+        }
+        .content{
+            text-align: justify;
+        }
+        .btn-area{
+            @extend %btn-default;
+            .btn-default{
+                margin: 0 auto;
+            }
+        }
     }
 
     @media (max-width: $bp991) {
