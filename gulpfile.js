@@ -4,6 +4,7 @@ const gulp = require('gulp'),
     concat = require('gulp-concat'),
     minify = require('gulp-minify'),
     image = require('gulp-image'),
+    webp = require('gulp-webp'),
     sass = require('gulp-sass');
 
 sass.compiler = require('node-sass');
@@ -29,7 +30,6 @@ const assets = {
     ],
     js: [
         "node_modules/jquery/dist/jquery.min.js",
-        "node_modules/bootstrap/dist/js/bootstrap.min.js",
     ],
 }
 
@@ -82,6 +82,7 @@ function minImg() {
     return gulp
         .src(paths.dev.img)
         .pipe(image())
+        .pipe(webp())
         .pipe(gulp.dest(paths.dist.img))
 }
 
