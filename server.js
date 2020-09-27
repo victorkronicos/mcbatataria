@@ -1,7 +1,12 @@
-var express = require('express');
-var path = require('path');
-var app = express();
+const express = require('express');
+const compression = require('compression');
+const path = require('path');
+const app = express();
 
+// GZIP
+app.use(compression());
+
+// Forçar HTTPS
 app.use((req, res, next) => {  
   if ((req.headers["x-forwarded-proto"] || "").endsWith("http")) 
       res.redirect(`https://${req.headers.host}${req.url}`); 
