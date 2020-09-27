@@ -2,6 +2,13 @@ var express = require('express');
 var path = require('path');
 var app = express();
 
+app.use((req, res, next) => {  
+  if ((req.headers["x-forwarded-proto"] || "").endsWith("http")) 
+      res.redirect(`https://${req.headers.host}${req.url}`); 
+  else
+      next(); 
+});
+
 // view engine setup
 app.set("views", path.join(__dirname, "src"));
 app.set("view engine", "ejs");
